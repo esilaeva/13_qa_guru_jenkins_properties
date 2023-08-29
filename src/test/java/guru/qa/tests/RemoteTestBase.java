@@ -19,6 +19,14 @@ public class RemoteTestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 
+        System.getProperty("remote");
+        System.getProperty("browser");
+        System.getProperty("browserSize");
+
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//        Configuration.browser = "chrome";
+//        Configuration.browserSize = "1920x1080";
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
                 "enableVNC", true,
