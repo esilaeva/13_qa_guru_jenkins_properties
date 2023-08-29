@@ -21,15 +21,4 @@ public class RegistrationPageTests extends RemoteTestBase {
         steps.fillForm();
         steps.checkResult();
     }
-
-    @Test
-    void successRegistrationTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        WebSteps steps = new WebSteps();
-
-        steps.openMainPage();
-        steps.deleteBanners();
-        steps.fillForm();
-        steps.checkResult();
-    }
 }
