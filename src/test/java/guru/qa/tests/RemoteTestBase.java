@@ -16,13 +16,14 @@ public class RemoteTestBase {
     @BeforeAll
     static void beforeAll() {
 
-        Configuration.baseUrl = "https://demoqa.com";
+        System.getProperty("baseUrl");
+        //Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 
-        System.getProperty("remote");
+
         System.getProperty("browser");
         System.getProperty("browserSize");
-
+        System.getProperty("remote");
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 //        Configuration.browser = "chrome";
 //        Configuration.browserSize = "1920x1080";
